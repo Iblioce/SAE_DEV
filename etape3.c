@@ -45,8 +45,9 @@ int main() {
 	while(c!='f'){
 		saut++;
 		c=cesar(saut,*zone_char,alphabet,ALPHABET);
-		printf("%c",*zone_char);		
+
 	}
+	printf("%c", c);
 	while (!feof(lire)) {	
 		fread(zone_char,sizeof(char),1,lire);
 		c=cesar(saut,*zone_char,alphabet,ALPHABET);
