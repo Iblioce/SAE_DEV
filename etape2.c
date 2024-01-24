@@ -42,7 +42,7 @@ int main() {
 	ecrire=fopen("Reponse2.txt","w+");
 	while (!feof(lire)) {
 		c=fread(zone_char,sizeof(char),1,lire);
-		c=cesar(13,*zone_char,alphabet);
+		c=cesar(13,*zone_char,alphabet,ALPHABET);
 		printf("%c", c);
 		fwrite(&c,sizeof(char),1,ecrire);
 	}
