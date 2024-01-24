@@ -1,0 +1,17 @@
+SAé 1.1 : Décodages
+Groupes : 2 ou 3 étudiant.e.s par groupe.
+Composition du groupe à envoyer avant le vendredi 19/01 17h.
+
+La SAé se présente sous la forme d'une suite de problèmes de décodages.
+Réussir une étape permet de décoder l'étape suivante.
+
+Seul votre propre code écrit en langage C doit être utilisé pour résoudre les énigmes. 
+Il devra être rendu accessible aux examinateurs via un projet GIT.
+
+Vous serez évalué.e.s lors d'une soutenance où vous expliquerez l'étape à laquelle vous êtes parvenus, ainsi que les méthodes utilisées et le code développé.
+Il est attendu que chaque personne du groupe comprenne et sache expliquez le code et les méthodes utilisées.
+La soutenance comportera une partie de discussion algorithmique à propos de votre code mais également de l'encodage de façon plus générale. Elle comptera dans la SAé 1.2 : Exploration algorithmique d’un problème.
+
+L'étape suivante de la SAé est décrite dans le fichier Etape2.bin.
+Chaque caractère du fichier a été encodé avec un code dit César (https://fr.wikipedia.org/wiki/Chiffrement_par_décalage) de paramètre 13.
+
