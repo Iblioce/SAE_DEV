@@ -43,11 +43,12 @@ int main() {
 	while (!feof(lire)) {
 		c=fread(zone_char,sizeof(char),1,lire);
 		int saut=0;
-		while(c!='F'){
-			c++;
+		while(c!='f'){
+			c=cesar(saut,*zone_char,alphabet,ALPHABET);
 			saut++;
 		}
-		c=cesar(saut,*zone_char,ALPHABET);
+		saut--;
+		c=cesar(saut,*zone_char,alphabet,ALPHABET);
 		printf("%c", c);
 		fwrite(&c,sizeof(char),1,ecrire);
 	}
