@@ -15,7 +15,7 @@ char cesar(int n,char lettre,char* alphabet) {
 	if (n>i) {
 		i+=26;
 	}
-	i-=13;
+	i-=n;
 	return alphabet[i];
 }
 
