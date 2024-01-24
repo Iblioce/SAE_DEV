@@ -40,15 +40,17 @@ int main() {
 
 	lire=fopen("Etape3.bin","r");
 	ecrire=fopen("Reponse3.txt","w+");
+	fread(zone_char,sizeof(char),1,lire);
+	int saut=0;
+	while(c!='f'){
+		saut++;
+		c=cesar(saut,*zone_char,alphabet,ALPHABET);
+		printf("%c",c);
+			
+	}
 	while (!feof(lire)) {
-		fread(zone_char,sizeof(char),1,lire);
-		int saut=0;
-		while(c!='f'){
-			c=cesar(saut,*zone_char,alphabet,ALPHABET);
-			printf("%c",c);
-			saut++;
-		}
-		saut--;
+		
+		
 		c=cesar(saut,*zone_char,alphabet,ALPHABET);
 		printf("%c", c);
 		fwrite(&c,sizeof(char),1,ecrire);
