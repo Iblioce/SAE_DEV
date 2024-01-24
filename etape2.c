@@ -4,9 +4,9 @@
 #include <unistd.h>
 
 
-char cesar(int n,char lettre,char* alphabet) {
+char cesar(int n,char lettre,char* alphabet,char* ALPHABET) {
 	int i=0;
-	while (lettre!=alphabet[i]) {
+	while (lettre!=alphabet[i] | lettre!=ALPHABET[i]) {
 		i++;
 		if (i==26) {
 			return lettre;
@@ -21,16 +21,21 @@ char cesar(int n,char lettre,char* alphabet) {
 
 int main() {
 	char alphabet[26];
+	char ALPHABET[26];
+	char maj='A';
 	char c='a';
 	int i=0;
 	FILE* lire;
 	FILE* ecrire;
 	char *zone_char=malloc(sizeof(char));
 	alphabet[i]=c;
+	ALPHABET[i]=maj;
 	while (c!='z') {
 		c++;
 		i++;
+		maj++;
 		alphabet[i]=c;
+		ALPHABET[i]=maj;
 	}
 
 	lire=fopen("Etape2.bin","r");
