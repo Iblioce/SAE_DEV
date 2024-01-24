@@ -1,6 +1,8 @@
+#include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+
 
 char cesar(int n,char lettre,char* alphabet) {
 	int i=0;
@@ -15,8 +17,6 @@ char cesar(int n,char lettre,char* alphabet) {
 	}
 	i-=13;
 	return alphabet[i];
-
-
 }
 
 int main() {
@@ -32,15 +32,14 @@ int main() {
 		i++;
 		alphabet[i]=c;
 	}
-	c=cesar(13,'s',alphabet);
-	printf("%c",c);
 
 	lire=fopen("Etape2.bin","r");
 	ecrire=fopen("Reponse2.txt","w+");
 	while (!feof(lire)) {
 		c=fread(zone_char,sizeof(char),1,lire);
-		c=cesar(13,c,alphabet);
-		fwrite(zone_char,sizeof(char),1,ecrire);
+		c=cesar(13,*zone_char,alphabet);
+		printf("%c", c);
+		fwrite(&c,sizeof(char),1,ecrire);
 	}
 	fclose(lire);
 	fclose(ecrire);
