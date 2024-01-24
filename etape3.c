@@ -22,8 +22,8 @@ char cesar(int n,char lettre,char* alphabet,char* ALPHABET) {
 int main() {
 	char alphabet[26];
 	char ALPHABET[26];
-	char maj='O';
-	char c='o';
+	char maj='A';
+	char c='a';
 	int i=0;
 	FILE* lire;
 	FILE* ecrire;
