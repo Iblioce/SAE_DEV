@@ -2,11 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <math.h>
 
 int main() {
-	long int n = 6554179; // clef publique
-	long int d = 55621; // clef privée utilisée pour déchiffré
+	long double n = 6554179; // clef publique
+	long double d = 55621; // clef privée utilisée pour déchiffré
 	int i = 0 ;
 	char alphabet[26];
 	char ALPHABET[26];
@@ -35,7 +34,7 @@ int main() {
 		chiffre = chiffre % n;
 		while (d > 0) {
 			if (d % 2 == 1) {
-		            result = (result * chiffre) % n;
+		            result = ((result * chiffre) % n);
 		        }
 		        d = d / 2;
 		        chiffre = (chiffre * chiffre) % n;
