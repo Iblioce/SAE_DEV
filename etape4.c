@@ -17,7 +17,7 @@ int main() {
 		fread( &zone_char ,sizeof(char),1,lire);
 		char chiffre = *zone_char;
 		char dechifre = (chiffre^d)%n;
-		printf("%d", dechifre);
+		printf("%c", dechifre);
 		fwrite(&chiffre,sizeof(char),1,ecrire);
 	}
 	fclose(lire);
