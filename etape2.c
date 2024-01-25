@@ -24,7 +24,7 @@ char cesar(int n,char lettre,char* alphabet,char* ALPHABET) {
 		return alphabet[i];
 	}
 	else {
-	return ALPHABET[i];
+		return ALPHABET[i];
 	}
 }
 
