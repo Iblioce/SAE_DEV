@@ -6,17 +6,24 @@
 
 char cesar(int n,char lettre,char* alphabet,char* ALPHABET) {
 	int i=0;
+	int m;
 	while (lettre!=alphabet[i] && lettre!=ALPHABET[i]) {
 		i++;
 		if (i==26) {
 			return lettre;
 		}
 	}
+	if (lettre==alphabet[i]) {
+		m=1;
+	}
 	if (n>i) {
 		i+=26;
 	}
 	i-=n;
+	if (m==1) {
 	return alphabet[i];
+	}
+	return ALPHABET[i];
 }
 
 int main() {
