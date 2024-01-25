@@ -30,7 +30,7 @@ int main() {
 	c = (chiffrement%n);
 	while(!feof(lire)){
 		fread( *zone_char ,sizeof(char),1,lire)
-		printf("%d",chiffrement);
+		printf("%d",c);
 		fwrite(&c,sizeof(char),1,ecrire);
 	}
 	fclose(lire);
