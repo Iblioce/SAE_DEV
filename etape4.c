@@ -4,8 +4,8 @@
 #include <unistd.h>
 
 int main() {
-	long double n = 6554179; // clef publique
-	long double d = 55621; // clef privée utilisée pour déchiffré
+	long int n = 6554179; // clef publique
+	long int d = 55621; // clef privée utilisée pour déchiffré
 	int i = 0 ;
 	char alphabet[26];
 	char ALPHABET[26];
@@ -29,16 +29,9 @@ int main() {
 	while(!feof(lire)){
 		
 		fread( &zone_char ,sizeof(char),1,lire);
-		long double chiffre = *zone_char;
-		long double result = 1;
-		chiffre = chiffre % n;
-		while (d > 0) {
-			if (d % 2 == 1) {
-		            result = ((result * chiffre) % n);
-		        }
-		        d = d / 2;
-		        chiffre = (chiffre * chiffre) % n;
-	    	}
+		long char chiffre = *zone_char;
+		long int result = 1;
+		char dechifre = chiffre**d%n;
 		printf("%d", dechiffrement);
 		fwrite(&chiffre,sizeof(char),1,ecrire);
 	}
