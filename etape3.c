@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-
 char cesar(int n,char lettre,char* alphabet,char* ALPHABET) {
 	int i=0;
 	int m=0;
