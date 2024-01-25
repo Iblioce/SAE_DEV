@@ -21,9 +21,11 @@ char cesar(int n,char lettre,char* alphabet,char* ALPHABET) {
 	}
 	i-=n;
 	if (m==1) {
-	return alphabet[i];
+		return alphabet[i];
 	}
+	else {
 	return ALPHABET[i];
+	}
 }
 
 int main() {
