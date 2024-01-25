@@ -6,7 +6,7 @@
 
 char cesar(int n,char lettre,char* alphabet,char* ALPHABET) {
 	int i=0;
-	int m;
+	int m=0;
 	while (lettre!=alphabet[i] && lettre!=ALPHABET[i]) {
 		i++;
 		if (i==26) {
