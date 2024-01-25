@@ -50,7 +50,7 @@ int main() {
 	ecrire=fopen("Reponse3.txt","w+");
 	fread(zone_char,sizeof(char),1,lire);
 	int saut=0;
-	while(c!='f'){
+	while(c!='F'){
 		saut++;
 		c=cesar(saut,*zone_char,alphabet,ALPHABET);
 	}
