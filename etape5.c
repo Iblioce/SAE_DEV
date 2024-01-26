@@ -56,10 +56,9 @@ int main() {
         unsigned long int chiffre;
         fread(&chiffre, sizeof(unsigned long int), 1, lire);
         unsigned long int dechiffre = 1;
-        for (unsigned long int i = 0; i < d; i++) 
-            {//fais l'équivalent de M congru àC^d modulo n
+        for (unsigned long int i = 0; i < d; i++) {//fais l'équivalent de M congru àC^d modulo n
             dechiffre = (dechiffre * chiffre) % n;
-            }
+        }
         fprintf(ecrire, "%lc", (char) dechiffre);
     }
     fclose(lire);
